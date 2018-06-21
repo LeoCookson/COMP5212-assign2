@@ -12,17 +12,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using COMP5212.Model;
 
 namespace COMP5212
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+}
+
+    
     public partial class MainWindow : Window
     {
+
+
+
+        private static void LoadDB()
+        {
+            List<Customer> CustomerDB = new List<Customer>();
+
+
+            new Customer("Jaarna", "Kereopa", "123-2514");
+            new Customer("Sue", "Stook", "123-1263");
+            new Customer("Jamie", "Allom", "123-3658");
+            new Customer("Brain", "Janes", "123-9898");
+
+        }
+
         public MainWindow()
         {
-            InitializeComponent();
+            LoadDB();
+
+            
         }
     }
-}
+

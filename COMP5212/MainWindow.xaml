@@ -1,12 +1,103 @@
 ﻿<Window x:Class="COMP5212.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:COMP5212"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
         
+        
+        
+        
+     
+        
+        
+        
+        Title="MainWindow" Height="600" Width="700">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="569"/>
+        </Grid.RowDefinitions>
+        <Button Content="Search" VerticalAlignment="Center"
+                Height="37"  Margin="276,45,261,487"/>
+
+
+
+
+        <ListBox Name="NameBox" Grid.Column="0" Margin="18,112,339,109">
+
+            <ListBox.ItemTemplate>
+
+                <DataTemplate>
+
+                    <TextBox FontSize="30" VerticalAlignment="Center"
+                             HorizontalAlignment="Stretch" IsReadOnly="True" BorderThickness="0">
+
+                        <TextBox.Text>
+
+
+                            <MultiBinding StringFormat="{}{0} {1}">
+
+                                <Binding Path="FName"/>
+                                <Binding Path="LName"/>
+
+
+                            </MultiBinding>
+
+                        </TextBox.Text>
+
+
+                    </TextBox>
+
+
+                </DataTemplate>
+
+
+            </ListBox.ItemTemplate>
+
+
+        </ListBox>
+
+
+
+        <Label  Content="EnterCustomerName" HorizontalAlignment="Left" FontSize="15" Margin="29,10,0,0" VerticalAlignment="Top" 
+        />
+
+
+        <Label  Content="CustomerDetails:" HorizontalAlignment="Left" FontSize="15" Margin="498,103,0,0" VerticalAlignment="Top" Width="151" Height="29" 
+ />
+
+        <Label  Content="FirstName" HorizontalAlignment="Left" FontSize="15" Margin="379,160,0,0" VerticalAlignment="Top" 
+ />
+        <Label  Content="LastName" HorizontalAlignment="Left" FontSize="15" Margin="379,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.464,0.606" 
+ />
+        <Label  Content="Phone" HorizontalAlignment="Left" FontSize="15" Margin="379,350,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.854,1.547" 
+ />
+        <TextBox FontSize="30" VerticalAlignment="Center"
+                               BorderThickness="3" Margin="29,45,433,487" Height="37"/>
+        <TextBox FontSize="30" VerticalAlignment="Center"
+                               BorderThickness="3" Margin="468,160,30,372" Height="37"/>
+        <TextBox FontSize="30" VerticalAlignment="Center"
+                               BorderThickness="3" Margin="468,259,30,273" Height="37"/>
+        <TextBox FontSize="30" VerticalAlignment="Center"
+                               BorderThickness="3" Margin="468,350,30,182" Height="37"/>
+
+
+
+        <Button Content="Update" FontSize="20"  Margin="361,474,176,66"  />
+        <Button Content="Add" FontSize="20"  Margin="527,474,10,66" RenderTransformOrigin="1.303,0.75"  />
+        <Button Content="List Customers" FontSize="20" Margin="18,522,519,18"  />
+        <Button Content="Clear List" FontSize="20"  Margin="190,522,347,18"  />
+        <Button Content="Delete" FontSize="20"  Margin="361,522,176,18"  />
+        <Button Content="Clear" FontSize="20"  Margin="527,522,10,18"  />
+
+
     </Grid>
 </Window>
